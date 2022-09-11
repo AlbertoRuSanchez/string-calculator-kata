@@ -24,4 +24,16 @@ public class StringCalculatorShould {
         assertThat(result).isEqualTo(0);
     }
 
+    @Test
+    void return_int_number_when_only_one_string_number_given() {
+        //Given
+        String stringNumber = "7";
+
+        //When
+        int result = underTest.add(stringNumber);
+
+        //Then
+        assertThat(result).isEqualTo(7);
+    }
+
 }
