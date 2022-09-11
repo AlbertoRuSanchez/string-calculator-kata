@@ -1,8 +1,13 @@
 public class StringCalculator {
     public int add(String stringNumbers) {
-        if(!stringNumbers.isEmpty()){
+        if (stringNumbers.isEmpty()) {
+            return 0;
+        }
+        if (!stringNumbers.contains(",")) {
             return Integer.parseInt(stringNumbers);
         }
-        return 0;
+        String[] numbers = stringNumbers.split(",");
+        return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+
     }
 }

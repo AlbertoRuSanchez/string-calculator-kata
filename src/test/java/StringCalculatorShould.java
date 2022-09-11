@@ -36,4 +36,15 @@ public class StringCalculatorShould {
         assertThat(result).isEqualTo(7);
     }
 
+    @Test
+    void return_sum_of_given_string_numbers_coma_separated() {
+        //Given
+        String stringNumbers = "5,5";
+
+        //When
+        int result = underTest.add(stringNumbers);
+
+        //Then
+        assertThat(result).isEqualTo(10);
+    }
 }
